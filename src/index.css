@@ -1,0 +1,122 @@
+body {
+    padding: 0;
+    font-family: "Open Sans";
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    padding: 10px 0;
+    grid-template-columns: 1fr 1fr;
+}
+
+.left {
+    padding: 50px;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.left h1 {
+    font-weight: 800;
+    color: #02245b;
+}
+.left p {
+    margin-bottom: 30px;
+}
+label {
+    font-weight: 700;
+}
+
+form {
+    margin-top: 10px;
+    display: flex;
+}
+
+form input {
+    flex: 1;
+    padding: 15px 10px;
+    border-radius: 10px 0 0 10px;
+    outline: none;
+    border: 1px solid #02245b;
+}
+form button {
+    padding: 15px 25px;
+    background: #02245b;
+    color: #ffffff;
+    outline: none;
+    border: 1px solid #02245b;
+    border-radius: 0 10px 10px 0;
+}
+
+.slider {
+    display: flex;
+    gap: 10px;
+    overflow: scroll;
+    padding: 50px;
+}
+.slider::-webkit-scrollbar {
+    display: none;
+}
+.card {
+    flex-shrink: 0;
+    width: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+
+.card-content {
+    padding: 10px;
+}
+.card-content h4 {
+    margin: 0;
+}
+
+.card-content p {
+    font-size: 0.8rem;
+    color: #919191;
+}
+
+.slider-control {
+    display: flex;
+    justify-content: end;
+    grid-column: 1/-1;
+    padding-right: 100px;
+}
+
+.slider-control button {
+    width: 50px;
+    height: 5px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.card-container {
+    transition: 0.3s ease-in-out;
+    display: flex;
+    gap: 10px;
+}
+
+@media screen and (max-width: 750px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    .left {
+        padding: 15px;
+    }
+    .slider {
+        padding: 15px;
+    }
+    .slider-control {
+        display: none;
+    }
+}
